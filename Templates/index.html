@@ -1,0 +1,50 @@
+{% load crispy_forms_tags%}
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/home.css'%}">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <section class="body">
+        <div class="header-img">
+           
+        </div>
+        
+        <div class="input">
+            <div class="img">
+                <img src="{%static 'images/logo.png' %}"  alt="ff">
+            </div>
+            <form action="" method="post" class="form">
+                {% csrf_token %}
+                {{form | crispy}}
+
+
+                <input type="submit" class="btn">
+
+                <a href="">Forget Login?</a>
+                <a href="">Test your browser</a>
+                <a href="">Trouble test your browser</a>
+            </form>
+            
+            
+            
+        </div>
+   
+    </section>
+
+    <script src="{% static 'js/show.js'%}">
+       
+      
+        
+    </script>
+</body>
+</html>
